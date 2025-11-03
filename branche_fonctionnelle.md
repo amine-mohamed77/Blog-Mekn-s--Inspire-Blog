@@ -6,7 +6,7 @@ How to tell the human and cultural stories of Meknes through a participatory blo
 ___________________________________
 ## Primary User Identification
 
-### Persona – Busy Reader (Priority)
+### salma – Busy Reader (Priority)
 **Age/Context:**  
 22 years old, a university student in Meknes. She reads articles on her smartphone between classes or during short breaks. She enjoys discovering stories about her city and learning from other people’s experiences.
 
@@ -26,7 +26,7 @@ Slow navigation, unclear titles, too much text, and lack of summarized content f
 Smartphone (Android), average Wi-Fi or 4G connection, short sessions of 5–10 minutes between classes.
 
 ___________________________________
-### Persona – Tourist Visitor
+### Alex – Tourist Visitor
 **Age/Context:**  
 29 years old, international traveler visiting Meknes to explore its authentic culture and history. Uses a smartphone for quick searches while traveling and a laptop for planning visits.
 
