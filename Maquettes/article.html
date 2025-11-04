@@ -12,7 +12,11 @@
       }
     };
   </script>
-  <style>html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}</style>
+  <style>
+    html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .no-scrollbar::-webkit-scrollbar { display:none }
+    .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none }
+  </style>
 </head>
 <body class="bg-sand text-night">
   <div class="min-h-screen flex flex-col">
@@ -54,6 +58,37 @@
         <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1200&auto=format&fit=crop" alt="Tea and culture">
         <p>Walk slowly, listen closely, and the city will tell you a new story each day.</p>
       </article>
+
+      <!-- Related Stories Section -->
+      <section class="mt-12 border-t border-brick/10 pt-8">
+        <h3 class="text-xl font-semibold mb-6">Related Stories</h3>
+        <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
+          <a href="article.html" class="snap-start min-w-[280px] bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <div class="h-32 bg-[url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="p-4">
+              <div class="text-sm text-night/60 mb-1">Hidden Gems</div>
+              <div class="font-semibold">Courtyards of Meknes</div>
+              <div class="text-sm text-night/70 mt-1">Discover the peaceful inner spaces of traditional riads.</div>
+            </div>
+          </a>
+          <a href="article.html" class="snap-start min-w-[280px] bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <div class="h-32 bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="p-4">
+              <div class="text-sm text-night/60 mb-1">Culture</div>
+              <div class="font-semibold">Tea rituals in the alleys</div>
+              <div class="text-sm text-night/70 mt-1">Golden cups and stories shared at sunset.</div>
+            </div>
+          </a>
+          <a href="article.html" class="snap-start min-w-[280px] bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <div class="h-32 bg-[url('https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="p-4">
+              <div class="text-sm text-night/60 mb-1">Events</div>
+              <div class="font-semibold">Market rhythms</div>
+              <div class="text-sm text-night/70 mt-1">Sounds and colors of the souk at dusk.</div>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Floating actions on desktop right -->

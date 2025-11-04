@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meknes Stories — Home</title>
+  <title>Stories of Meknes — Discover Cultural Heritage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
@@ -19,20 +19,24 @@
     html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
     .no-scrollbar::-webkit-scrollbar { display:none }
     .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none }
+    .hero-bg { background: linear-gradient(135deg, rgba(159, 62, 46, 0.8), rgba(177, 91, 64, 0.6)), url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?q=80&w=1200&auto=format&fit=crop') center/cover; }
   </style>
 </head>
 <body class="bg-sand text-night">
   <div class="min-h-screen flex flex-col">
+    <!-- Header / Navbar -->
     <header class="sticky top-0 z-40 bg-sand/95 backdrop-blur border-b border-brick/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <a href="index.html" class="text-lg sm:text-2xl font-semibold text-brick">Meknes Stories</a>
-            <nav class="hidden md:flex items-center gap-4 text-sm">
-              <a class="hover:text-brick" href="#latest">Culture</a>
-              <a class="hover:text-brick" href="#latest">People</a>
-              <a class="hover:text-brick" href="#latest">Events</a>
-              <a class="hover:text-brick" href="#latest">Hidden Gems</a>
+          <div class="flex items-center gap-6">
+            <a href="index.html" class="text-lg sm:text-2xl font-bold text-brick">Stories of Meknes</a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+              <a class="hover:text-brick transition-colors" href="stories_list.html">Culture</a>
+              <a class="hover:text-brick transition-colors" href="stories_list.html">People</a>
+              <a class="hover:text-brick transition-colors" href="stories_list.html">Events</a>
+              <a class="hover:text-brick transition-colors" href="stories_list.html">Hidden Gems</a>
+              <a class="hover:text-brick transition-colors" href="stories_list.html">Blog</a>
+              <a class="hover:text-brick transition-colors" href="#contact">Contact</a>
             </nav>
           </div>
           <div class="hidden md:flex items-center gap-3">
@@ -40,9 +44,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-brick" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"/></svg>
               <input aria-label="Search stories" placeholder="Search stories" class="w-full outline-none text-[15px] placeholder-night/50 bg-transparent" />
             </label>
-            <a href="dashboard.html" class="px-3 py-2 rounded-lg bg-gold/20 text-brick text-sm font-medium">Contribute</a>
+            <a href="dashboard.html" class="px-4 py-2 rounded-lg bg-gold text-white text-sm font-medium hover:bg-gold/90 transition-colors">Contribute</a>
           </div>
         </div>
+        <!-- Mobile Search & Filters -->
         <div class="mt-3 md:hidden flex gap-2">
           <label class="flex items-center gap-2 flex-1 bg-white rounded-xl px-3 py-2 shadow-sm ring-1 ring-black/5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-brick" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"/></svg>
@@ -52,6 +57,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-brick"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.5 6h9.75M3.75 6h.008M6 12h14.25M3.75 12h.008M9 18h11.25M3.75 18h.008"/></svg>
           </button>
         </div>
+        <!-- Mobile Category Pills -->
         <div class="mt-3 flex gap-2 overflow-x-auto no-scrollbar md:hidden pb-1">
           <button class="px-3 py-1.5 text-sm rounded-full bg-brick text-white whitespace-nowrap">All</button>
           <button class="px-3 py-1.5 text-sm rounded-full bg-white text-night ring-1 ring-black/5 whitespace-nowrap">Culture</button>
@@ -61,6 +67,29 @@
         </div>
       </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-brick/20 to-transparent"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Discover the Stories of <span class="text-gold">Meknes</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+            Explore the cultural richness, hidden gems, and human stories that make Meknes a treasure of Moroccan heritage.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="stories_list.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-night font-semibold rounded-xl hover:bg-gold/90 transition-colors">
+              Explore Stories
+            </a>
+            <a href="#latest" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/20 transition-colors">
+              Latest Articles
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <main class="flex-1">
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
@@ -186,11 +215,51 @@
       </section>
     </main>
 
+    <!-- Footer -->
+    <footer id="contact" class="bg-night text-white mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold text-gold mb-4">Stories of Meknes</h3>
+            <p class="text-white/80 mb-6 max-w-md">
+              Preserving and sharing the cultural heritage, human stories, and hidden treasures of Meknes for future generations.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-colors">📘</a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-colors">📷</a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-colors">🐦</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Explore</h4>
+            <ul class="space-y-2 text-white/80">
+              <li><a href="stories_list.html" class="hover:text-gold transition-colors">Culture</a></li>
+              <li><a href="stories_list.html" class="hover:text-gold transition-colors">People</a></li>
+              <li><a href="stories_list.html" class="hover:text-gold transition-colors">Events</a></li>
+              <li><a href="stories_list.html" class="hover:text-gold transition-colors">Hidden Gems</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2 text-white/80">
+              <li>📧 stories@meknes.ma</li>
+              <li>📍 Meknes, Morocco</li>
+              <li><a href="dashboard.html" class="hover:text-gold transition-colors">Contribute</a></li>
+              <li><a href="#" class="hover:text-gold transition-colors">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/60">
+          <p>&copy; 2025 Stories of Meknes. Preserving cultural heritage with love.</p>
+        </div>
+      </div>
+    </footer>
+
     <!-- Bottom nav only on small screens -->
     <nav class="fixed md:hidden bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur border-t border-brick/10">
       <div class="max-w-7xl mx-auto grid grid-cols-4 px-6 py-2 text-[12px] text-night/70">
         <a href="index.html" class="flex flex-col items-center gap-1 text-brick">🏠 Home</a>
-        <a href="#" class="flex flex-col items-center gap-1">🔎 Explore</a>
+        <a href="stories_list.html" class="flex flex-col items-center gap-1">🔎 Explore</a>
         <a href="profile.html" class="flex flex-col items-center gap-1">⭐ Favorites</a>
         <a href="profile.html" class="flex flex-col items-center gap-1">👤 Profile</a>
       </div>

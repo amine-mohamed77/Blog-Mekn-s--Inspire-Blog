@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meknes Stories — Dashboard</title>
+  <title>Stories of Meknes — Admin Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
@@ -10,7 +10,10 @@
       theme: { extend: { colors:{ sand:'#F5E9DA',clay:'#B15B40',brick:'#9E3E2E',gold:'#C8A44D',night:'#1F1B16'} } }
     };
   </script>
-  <style>html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}</style>
+  <style>
+    html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .sidebar-bg { background: linear-gradient(135deg, #1F1B16, #2A2520); }
+  </style>
 </head>
 <body class="bg-sand text-night">
   <div class="min-h-screen flex flex-col">
@@ -19,25 +22,70 @@
         <a href="index.html" class="p-2 rounded-full bg-white shadow ring-1 ring-black/5" aria-label="Back">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
         </a>
-        <h1 class="text-lg sm:text-xl font-semibold">Contributor Dashboard</h1>
+        <h1 class="text-lg sm:text-xl font-semibold">Admin Dashboard</h1>
         <div class="ml-auto hidden sm:flex items-center gap-2 text-sm">
           <a href="profile.html" class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Profile</a>
+          <a href="login.html" class="px-3 py-1.5 rounded-lg bg-brick/10 text-brick">Logout</a>
         </div>
       </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
-      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
-        <div class="text-[12px] text-night/60">Views</div>
-        <div class="text-xl font-semibold text-brick">12.4k</div>
+    <!-- Admin Navigation Tabs -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-4">
+      <div class="flex gap-1 bg-white rounded-xl p-1 shadow-sm ring-1 ring-black/5 w-fit">
+        <button class="px-4 py-2 rounded-lg text-sm bg-brick text-white">Dashboard</button>
+        <button class="px-4 py-2 rounded-lg text-sm hover:bg-sand transition-colors">Manage Stories</button>
+        <button class="px-4 py-2 rounded-lg text-sm hover:bg-sand transition-colors">Approve Contributions</button>
+        <button class="px-4 py-2 rounded-lg text-sm hover:bg-sand transition-colors">Users</button>
+        <button class="px-4 py-2 rounded-lg text-sm hover:bg-sand transition-colors">Analytics</button>
       </div>
-      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
-        <div class="text-[12px] text-night/60">Likes</div>
-        <div class="text-xl font-semibold text-brick">3.1k</div>
+    </section>
+
+    <!-- Stats Overview -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-brick/10 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 text-brick" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-brick">12.4k</div>
+            <div class="text-sm text-night/60">Total Views</div>
+          </div>
+        </div>
       </div>
-      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
-        <div class="text-[12px] text-night/60">Shares</div>
-        <div class="text-xl font-semibold text-brick">842</div>
+      <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 text-gold" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-gold">3.1k</div>
+            <div class="text-sm text-night/60">Total Likes</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-clay/10 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 text-clay" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/></svg>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-clay">842</div>
+            <div class="text-sm text-night/60">Total Shares</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-night/10 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 text-night" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-night">156</div>
+            <div class="text-sm text-night/60">Total Stories</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -96,31 +144,91 @@
         </div>
       </div>
 
+      <!-- Admin Story Management Table -->
       <div class="bg-white rounded-2xl p-4 shadow-sm ring-1 ring-black/5">
-        <div class="flex items-center justify-between mb-3">
-          <h2 class="font-semibold">Your stories</h2>
-          <a class="text-sm text-brick" href="#">Manage</a>
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-lg font-semibold">Story Management</h2>
+          <div class="flex gap-2">
+            <select class="px-3 py-1.5 rounded-lg bg-sand/60 ring-1 ring-black/5 text-sm outline-none">
+              <option>All Stories</option>
+              <option>Published</option>
+              <option>Draft</option>
+              <option>Pending Review</option>
+            </select>
+            <button class="px-4 py-1.5 rounded-lg bg-brick text-white text-sm">Add New Story</button>
+          </div>
         </div>
-        <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="text-sm font-semibold">Courtyards of Meknes</div>
-              <div class="text-[12px] text-night/60">Published • 2.3k views</div>
-            </div>
-            <div class="flex gap-2">
-              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Edit</button>
-              <button class="px-3 py-1.5 rounded-lg bg-sand">Unpublish</button>
+        
+        <!-- Table Header -->
+        <div class="hidden md:grid grid-cols-6 gap-4 p-3 bg-sand/30 rounded-lg text-sm font-medium text-night/70 mb-3">
+          <div>Story Title</div>
+          <div>Author</div>
+          <div>Category</div>
+          <div>Status</div>
+          <div>Views</div>
+          <div>Actions</div>
+        </div>
+        
+        <!-- Table Rows -->
+        <div class="space-y-2">
+          <div class="md:grid grid-cols-6 gap-4 p-3 bg-white ring-1 ring-black/5 rounded-lg">
+            <div class="font-medium">Tales from Bab Mansour</div>
+            <div class="text-sm text-night/60">Zineb El Idrissi</div>
+            <div><span class="px-2 py-1 bg-gold/20 text-gold text-xs rounded-full">Culture</span></div>
+            <div><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Published</span></div>
+            <div class="text-sm">2.3k</div>
+            <div class="flex gap-1">
+              <button class="px-2 py-1 rounded bg-blue-50 text-blue-600 text-xs">Edit</button>
+              <button class="px-2 py-1 rounded bg-red-50 text-red-600 text-xs">Delete</button>
             </div>
           </div>
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="text-sm font-semibold">Market rhythms</div>
-              <div class="text-[12px] text-night/60">Draft • 120 views</div>
+          
+          <div class="md:grid grid-cols-6 gap-4 p-3 bg-white ring-1 ring-black/5 rounded-lg">
+            <div class="font-medium">Tea rituals in the alleys</div>
+            <div class="text-sm text-night/60">Hassan M.</div>
+            <div><span class="px-2 py-1 bg-gold/20 text-gold text-xs rounded-full">Culture</span></div>
+            <div><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Published</span></div>
+            <div class="text-sm">1.8k</div>
+            <div class="flex gap-1">
+              <button class="px-2 py-1 rounded bg-blue-50 text-blue-600 text-xs">Edit</button>
+              <button class="px-2 py-1 rounded bg-red-50 text-red-600 text-xs">Delete</button>
             </div>
-            <div class="flex gap-2">
-              <button class="px-3 py-1.5 rounded-lg bg-brick text-white">Publish</button>
-              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Delete</button>
+          </div>
+          
+          <div class="md:grid grid-cols-6 gap-4 p-3 bg-white ring-1 ring-black/5 rounded-lg">
+            <div class="font-medium">Hidden Gardens of Meknes</div>
+            <div class="text-sm text-night/60">Youssef A.</div>
+            <div><span class="px-2 py-1 bg-clay/10 text-clay text-xs rounded-full">Hidden Gems</span></div>
+            <div><span class="px-2 py-1 bg-gold/20 text-gold text-xs rounded-full">Pending</span></div>
+            <div class="text-sm">-</div>
+            <div class="flex gap-1">
+              <button class="px-2 py-1 rounded bg-green-50 text-green-600 text-xs">Approve</button>
+              <button class="px-2 py-1 rounded bg-red-50 text-red-600 text-xs">Reject</button>
             </div>
+          </div>
+          
+          <div class="md:grid grid-cols-6 gap-4 p-3 bg-white ring-1 ring-black/5 rounded-lg">
+            <div class="font-medium">Market rhythms</div>
+            <div class="text-sm text-night/60">Fatima Z.</div>
+            <div><span class="px-2 py-1 bg-brick/10 text-brick text-xs rounded-full">Events</span></div>
+            <div><span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Draft</span></div>
+            <div class="text-sm">120</div>
+            <div class="flex gap-1">
+              <button class="px-2 py-1 rounded bg-green-50 text-green-600 text-xs">Publish</button>
+              <button class="px-2 py-1 rounded bg-blue-50 text-blue-600 text-xs">Edit</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="flex items-center justify-between mt-6 pt-4 border-t border-night/10">
+          <div class="text-sm text-night/60">Showing 1-4 of 156 stories</div>
+          <div class="flex gap-2">
+            <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5 text-sm">Previous</button>
+            <button class="px-3 py-1.5 rounded-lg bg-brick text-white text-sm">1</button>
+            <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5 text-sm">2</button>
+            <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5 text-sm">3</button>
+            <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5 text-sm">Next</button>
           </div>
         </div>
       </div>
