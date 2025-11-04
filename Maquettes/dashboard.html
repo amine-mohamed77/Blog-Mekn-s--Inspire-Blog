@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meknes Stories — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors:{ sand:'#F5E9DA',clay:'#B15B40',brick:'#9E3E2E',gold:'#C8A44D',night:'#1F1B16'} } }
+    };
+  </script>
+  <style>html{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}</style>
+</head>
+<body class="bg-sand text-night">
+  <div class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-40 bg-sand/95 backdrop-blur border-b border-brick/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
+        <a href="index.html" class="p-2 rounded-full bg-white shadow ring-1 ring-black/5" aria-label="Back">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+        </a>
+        <h1 class="text-lg sm:text-xl font-semibold">Contributor Dashboard</h1>
+        <div class="ml-auto hidden sm:flex items-center gap-2 text-sm">
+          <a href="profile.html" class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Profile</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
+        <div class="text-[12px] text-night/60">Views</div>
+        <div class="text-xl font-semibold text-brick">12.4k</div>
+      </div>
+      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
+        <div class="text-[12px] text-night/60">Likes</div>
+        <div class="text-xl font-semibold text-brick">3.1k</div>
+      </div>
+      <div class="bg-white rounded-xl p-3 shadow-sm ring-1 ring-black/5">
+        <div class="text-[12px] text-night/60">Shares</div>
+        <div class="text-xl font-semibold text-brick">842</div>
+      </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 mt-4 flex-1 space-y-6 pb-20">
+      <div class="bg-white rounded-2xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold">Publish new story</h2>
+          <span class="text-[12px] text-night/60">Draft</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input class="w-full px-3 py-2 rounded-lg bg-sand/60 ring-1 ring-black/5 outline-none" placeholder="Title">
+          <input class="w-full px-3 py-2 rounded-lg bg-sand/60 ring-1 ring-black/5 outline-none" placeholder="Image URL">
+          <select class="w-full px-3 py-2 rounded-lg bg-sand/60 ring-1 ring-black/5 outline-none">
+            <option>Culture</option><option>People</option><option>Events</option><option>Hidden Gems</option>
+          </select>
+          <div class="sm:col-span-2">
+            <textarea rows="4" class="w-full px-3 py-2 rounded-lg bg-sand/60 ring-1 ring-black/5 outline-none" placeholder="Short description"></textarea>
+          </div>
+          <div class="flex gap-2 sm:col-span-2">
+            <button class="px-4 py-2 rounded-lg bg-white ring-1 ring-black/5 shadow-sm">Save draft</button>
+            <button class="px-4 py-2 rounded-lg bg-brick text-white">Publish</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold">Submitted stories</h2>
+          <a class="text-sm text-brick" href="#">View all</a>
+        </div>
+        <div class="space-y-3">
+          <div class="flex gap-3 items-center">
+            <div class="w-16 h-16 rounded-lg bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="flex-1">
+              <div class="text-sm font-semibold">Evening tea stories</div>
+              <div class="text-[12px] text-night/60">By: Amina • Category: Culture</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Edit</button>
+              <button class="px-3 py-1.5 rounded-lg bg-gold/30">Approve</button>
+              <button class="px-3 py-1.5 rounded-lg bg-sand">Reject</button>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div class="w-16 h-16 rounded-lg bg-[url('https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="flex-1">
+              <div class="text-sm font-semibold">Souk melodies</div>
+              <div class="text-[12px] text-night/60">By: Karim • Category: Events</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Edit</button>
+              <button class="px-3 py-1.5 rounded-lg bg-gold/30">Approve</button>
+              <button class="px-3 py-1.5 rounded-lg bg-sand">Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold">Your stories</h2>
+          <a class="text-sm text-brick" href="#">Manage</a>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm font-semibold">Courtyards of Meknes</div>
+              <div class="text-[12px] text-night/60">Published • 2.3k views</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Edit</button>
+              <button class="px-3 py-1.5 rounded-lg bg-sand">Unpublish</button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm font-semibold">Market rhythms</div>
+              <div class="text-[12px] text-night/60">Draft • 120 views</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-3 py-1.5 rounded-lg bg-brick text-white">Publish</button>
+              <button class="px-3 py-1.5 rounded-lg bg-white ring-1 ring-black/5">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom nav only on small screens -->
+    <nav class="fixed md:hidden bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur border-t border-brick/10">
+      <div class="max-w-7xl mx-auto grid grid-cols-4 px-6 py-2 text-[12px] text-night/70">
+        <a href="index.html" class="flex flex-col items-center gap-1">🏠 Home</a>
+        <a href="#" class="flex flex-col items-center gap-1">🔎 Explore</a>
+        <a href="profile.html" class="flex flex-col items-center gap-1">⭐ Favorites</a>
+        <a href="profile.html" class="flex flex-col items-center gap-1">👤 Profile</a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
