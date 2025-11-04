@@ -23,7 +23,7 @@ To quickly read recent and interesting stories about Meknes, without spending to
 Slow navigation, unclear titles, too much text, and lack of summarized content for short reading times.
 
 **Environment:**  
-Smartphone (Android), average Wi-Fi or 4G connection, short sessions of 5–10 minutes between classes.
+Smartphone or labtop, average Wi-Fi or 4G connection, short sessions of 5–10 minutes between classes.
 
 ___________________________________
 ### Alex – Tourist Visitor
