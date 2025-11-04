@@ -102,6 +102,9 @@ so that they can discover Meknes’ heritage and plan meaningful visits even wit
 | UC10 | Contributeur | Soumettre un nouvel article pour approbation | Must |
 
 ___________________________________
+### Use Case Diagram
+
+![Use Case Diagram – Meknes Stories Blog](Blog Platform_Use_Case_Diagram.png)
 
 # 6. Wireframes / UI Suggestions
 
