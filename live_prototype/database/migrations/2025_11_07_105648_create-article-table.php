@@ -6,13 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        //
-        Schema::create('article', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) { // <-- بالجمع
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
@@ -21,12 +17,8 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        //
-   Schema::dropIfExists('article');
+        Schema::dropIfExists('articles'); // <-- بالجمع
     }
 };
